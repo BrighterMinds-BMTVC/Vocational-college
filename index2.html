@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Contact Brighter Minds College and Brighter Minds Vocational for admissions, student support, and course information in Kenya." />
+  <meta name="keywords" content="Brighter Minds, Brighter Minds College, Brighter Minds Vocational, BMTVc, contact Brighter Minds, admissions contact, vocational college contact" />
+  <meta property="og:title" content="Contact Brighter Minds College | Brighter Minds Vocational" />
+  <meta property="og:description" content="Reach Brighter Minds College and Brighter Minds Vocational for admissions and program support." />
+  <title>Contact Brighter Minds College | Brighter Minds Vocational</title>
+  <link rel="stylesheet" href="p2.css" />
+</head>
+<body>
+  <div class="contact-wrapper">
+    <div class="contact-grid">
+      <section class="contact-info">
+        <div class="contact-badge">Admissions On Going</div>
+        <h2>Contact Us</h2>
+        <p class="lead">Reach out to our college team for admissions, academic support, or general information. We are ready to help you take the next step.</p>
+
+        <div class="reading-flow" aria-hidden="false">
+          <div class="flow-step" data-step="1" data-aos="fade-up" data-aos-delay="50">
+            <div class="step-badge">1</div>
+            <div class="step-body">
+              <strong>Explore programs</strong>
+              <div class="muted animated-subtitle">Discover the path that fits your goals.</div>
+            </div>
+          </div>
+
+          <div class="flow-step" data-step="2" data-aos="fade-up" data-aos-delay="120">
+            <div class="step-badge">2</div>
+            <div class="step-body">
+              <strong>Connect with us</strong>
+              <div class="muted animated-subtitle">Start a conversation and get clear answers fast.</div>
+            </div>
+          </div>
+
+          <div class="flow-step" data-step="3" data-aos="fade-up" data-aos-delay="190">
+            <div class="step-badge">3</div>
+            <div class="step-body">
+              <strong>Visit or apply</strong>
+              <div class="muted animated-subtitle">Take the next step with confidence and momentum.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-cta-strip">
+          <span>Need help choosing?</span>
+          <a href="#message-form">Start with our contact form</a>
+        </div>
+
+        <div class="tabs-wrap">
+          <div class="tab-list" role="tablist" aria-label="College contact tabs">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="principal">Principal's Office</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="admission">Admission Office</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="services">Student Services</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="address">School Address</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="location">Location</button>
+          </div>
+
+          <div class="tab-panel active" id="principal">
+            <div class="info-card">
+              <strong>Principal's Office</strong>
+              <p>Phone: +254 726 301 589</p>
+              <p>Email: principal@college.edu</p>
+              <p>Office Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="admission">
+            <div class="info-card">
+              <strong>Admission Office</strong>
+              <p>Phone: +254 726 301 589</p>
+              <p>Email: brightermindsvocational@gmail.com</p>
+              <p>Office Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="services">
+            <div class="info-card">
+              <strong>Student Services</strong>
+              <p>Phone: +254 726 301 589</p>
+              <p>Email: brightermindsvocational@gmail.com</p>
+              <p>Office Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="address">
+            <div class="info-card">
+              <strong>School Address</strong>
+              <p>0100 banana Road, Nairobi City</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="location">
+            <div class="info-card">
+              <strong>Location</strong>
+              <a href="https://maps.app.goo.gl/v1A3qbgE9HRvT2Bj6" target="_blank">View on Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form" id="message-form">
+        <h3>Send Us a Message</h3>
+        <p class="subtitle">Share your questions and our support team will respond within 24 hours.</p>
+
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+
+          <div class="form-group">
+            <input type="text" placeholder="Subject" required />
+          </div>
+
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.tab;
+
+        tabButtons.forEach((btn) => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+
+        tabPanels.forEach((panel) => {
+          panel.classList.remove('active');
+        });
+
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+        const nextPanel = document.getElementById(target);
+        nextPanel.classList.add('active');
+        nextPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    document.querySelectorAll('button').forEach((button) => {
+      button.addEventListener('click', function (event) {
+        if (button.querySelector('.ripple')) {
+          button.querySelector('.ripple').remove();
+        }
+
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 0.8;
+        ripple.style.width = `${size}px`;
+        ripple.style.height = `${size}px`;
+        ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
+        ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
+        button.appendChild(ripple);
+      });
+    });
+  </script>
+</body>
+</html>

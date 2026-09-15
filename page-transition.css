@@ -1,0 +1,83 @@
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: linear-gradient(135deg, #11131a 0%, #232838 50%, #0f1117 100%);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font: inherit;
+}
+
+.menu-button.active {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  z-index: 1000;
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(17, 20, 28, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.menu-dropdown ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.menu-dropdown li + li {
+  margin-top: 8px;
+}
+
+.menu-dropdown a {
+  display: block;
+  color: #f2f4ff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 6px;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-dropdown a:hover {
+  background: rgba(126, 231, 169, 0.16);
+  color: #7ee7a9;
+}
+
+.menu-dropdown.is-open {
+  display: block;
+}
+
+body.page-transition-active {
+  overflow: hidden;
+}
+
+body.page-transition-active .page-transition-overlay {
+  opacity: 0.98;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.25s ease, visibility 0s linear 0s, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.page-transition-active .button-container,
+body.page-transition-active .page-content {
+  opacity: 0.9;
+  transform: scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}

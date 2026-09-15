@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2a2d37 0%, #15161c 55%, #0e0f14 100%);
+  color: #f1f2f6;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.menu-button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.course-page {
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.page-content {
+  width: min(92%, 900px);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+  background: rgba(16, 18, 24, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.45);
+}
+
+.hero-section,
+.info-section,
+.benefits-section {
+  margin-bottom: 32px;
+  padding: 32px;
+  background: linear-gradient(145deg, rgba(56, 61, 74, 0.95), rgba(26, 29, 36, 0.95));
+  border: 2px solid rgba(126, 231, 169, 0.15);
+  border-radius: 22px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 16px 28px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.hero-section:hover,
+.info-section:hover,
+.benefits-section:hover {
+  transform: translateY(-2px);
+  border-color: rgba(126, 231, 169, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 35px rgba(126, 231, 169, 0.15);
+}
+
+.hero-section h1,
+.info-section h2,
+.benefits-section h2 {
+  margin: 8px 0 16px 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  background: linear-gradient(135deg, #7ee7a9 0%, #9ff3c9 50%, #cff8e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  line-height: 1.2;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(126, 231, 169, 0.2);
+}
+
+.hero-section p,
+.info-section p,
+.benefits-section p {
+  margin: 0 0 16px 0;
+  line-height: 2;
+  color: #e0e7ff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: justify;
+  word-spacing: 0.1em;
+}
+
+.benefits-section ul {
+  margin: 16px 0 0 0;
+  padding-left: 0;
+  color: #e0e7ff;
+  line-height: 2;
+  list-style: none;
+}
+
+.benefits-section li {
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all 0.3s ease;
+  padding-left: 32px;
+  position: relative;
+}
+
+.benefits-section li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #7ee7a9;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.benefits-section li:hover {
+  color: #7ee7a9;
+  transform: translateX(8px);
+}
+
+.benefits-section li:hover::before {
+  color: #7ee7a9;
+  font-size: 1.8em;
+}
+
+/* Light-green glow and pulse for folder/course items */
+.course-item,
+.info-section li,
+.benefits-section li {
+  transition: box-shadow 0.25s ease, color 0.18s ease, transform 0.18s ease;
+}
+.course-item:hover,
+.info-section li:hover,
+.benefits-section li:hover {
+  box-shadow: 0 12px 40px rgba(126, 231, 169, 0.12), inset 0 1px 0 rgba(255,255,255,0.03);
+  color: #7ee7a9;
+  transform: translateX(8px) translateY(-3px);
+}
